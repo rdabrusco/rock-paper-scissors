@@ -41,8 +41,8 @@ let rps = ["rock", "paper", "scissors"]
 function computerPlay() {
     return Math.floor(Math.random() * 3);
 }
-let playerSelection = playerChoice()
-let computerSelection = rps[computerPlay()]
+let playerSelection = 0;
+let computerSelection = rps[computerPlay()];
 
 function playerChoice() {
     let s = prompt("Rock, Paper, or Scissors?", "");
@@ -58,6 +58,11 @@ function play() {
         console.log(computerSelection)
         console.log(playRound(playerSelection, computerSelection));
     }
-    console.log(`Final Score: Player: ${x}, Computer: ${y}`)
+    if(confirm("Would you like to play another round?")) {
+        console.log(play())
+    } else {
+        console.log(`Final Score: Player: ${x}, Computer: ${y}`)
+    }
+    
 }
 console.log(play())
