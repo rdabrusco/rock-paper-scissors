@@ -1,5 +1,11 @@
 let x = 0;
 let y = 0;
+let rps = ["rock", "paper", "scissors"]
+
+
+let playerSelection = 0;
+
+let computerSelection = rps[computerPlay()];
 
 function playRound(playerSelection, computerSelection) {
     
@@ -37,12 +43,11 @@ function playRound(playerSelection, computerSelection) {
         playRound();
     }
 }
-let rps = ["rock", "paper", "scissors"]
+
 function computerPlay() {
     return Math.floor(Math.random() * 3);
 }
-let playerSelection = 0;
-let computerSelection = rps[computerPlay()];
+
 
 function playerChoice() {
     let s = prompt("Rock, Paper, or Scissors?", "");
@@ -65,4 +70,5 @@ function play() {
     }
     
 }
+
 console.log(play())
